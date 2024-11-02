@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <script src="../js/Vue3.js"></script>
+    <title>Introducción a VUE</title>
+</head>
+<body>
+    <header>
+		<h1>VUE</h1>
+    </header>
+    
+    <section id="seccion">
+        <article>
+            <p class="parrafo" v-bind:class="['margen','texto',colorFondo]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo adipisci eveniet excepturi fuga, earum vitae repellendus mollitia tenetur fugiat numquam molestiae aspernatur veniam accusamus praesentium cumque similique quia, iure nemo.</p>
+            <select v-model="colorFondo">
+                <option value="fondo1">Azul</option>
+                <option value="fondo2">Amarillo</option>
+                <option value="fondo3">Rosa</option>
+            </select>			
+			<label></label>
+            <hr>
+            
+        <article>
+            <button @click="increment" :disabled="cantidad == 15" id="mas" class="botonsitos">+</button>
+            <button @click="decrement" :disabled="cantidad == 1" id="menos" class="botonsitos">-</button><br>
+            <progress :value="progress" max="100">{{progress}}</progress>   
+            <p id="cantidad">{{ progress }}%</p>
+
+        </article>
+
+        <article>
+            <!--utlizar: v-fi, v-model, v-bind-->
+            
+            
+        </article>
+        
+        <article>
+           <h2>Tareas pendientes</h2>
+           <div>
+            <input type="text" v-model="nuevaTarea" @keyup.enter="agregarTarea" placeholder="Agrega una nueva tarea">
+            <ul>
+              <li v-for="(tarea, index) in tareas" :key="index" @click="marcarCompletada(index)">
+                <span :class="{ completada: tarea.completado }">{{ tarea.texto }}</span>
+              </li>
+            </ul>
+            <h3>Tareas completadas: {{ tareasCompletadas }}</h3>
+          </div>
+            <h3></h3>
+        </article>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
