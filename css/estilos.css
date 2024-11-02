@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+    background-color: aliceblue;
+}
+header{
+    background-color: deepskyblue;
+}
+.parrafo{
+    width:400px;
+    border:1px solid rgb(0, 172, 207);
+}
+
+.margen{
+    padding:10px;
+    margin:10px;
+    margin-left: 36%;
+}
+
+.texto{
+    color:#80006f;
+    font-size: 20px;
+}
+
+.fondo1{
+    background-color: #00ffff;
+}
+.fondo2{
+    background-color: #fbff1c;
+}
+.fondo3{
+    background-color: #fd56d3;
+}
+
+
+
+.colorRojo{
+	color: #f00;
+}
+
+.colorVerde{
+	color: #008000;
+}
+
+.colorNegro{
+	color: #000;
+}
+
+#cantidad{
+    font-size: 35px;
+}
+.botonsitos{
+    padding: 8px 17px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+}
+#mas{
+    background-color: #00f3;
+    margin-right: 1%;
+}
+#menos{
+    background-color: #f00;
+}
+.completada {
+    text-decoration: line-through;
+}
+li{
+    list-style-type: none;    
+}
+progress {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
